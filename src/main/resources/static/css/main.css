@@ -21,7 +21,7 @@ body {
     height: 100%;
     background-image: linear-gradient(to right top, #051937, #1b2b6d, #4f38a0, #cb37cb, #e112eb);
     /* background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    // Changing this bcoz i have deleted the image from background
     background-size: cover; */
 }
 
@@ -31,7 +31,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    /* background: 18.jpg; */
+    /* background: 18.jpg; */    /* Commenting this bcoz i have removed the image */
     content: "";
     z-index: 0;
 }
@@ -49,7 +49,7 @@ body:before {
 .form-control {
     width: 75%;
     min-height: 38px;
-    font-size: 1rem;
+    font-size: 1rem;                    /* Changed these properties also */
     font-weight: 700;
     border: 1px solid #c8c8c8;
 }
@@ -60,7 +60,7 @@ body:before {
 
 .fa-user {
     height: 20px;
-    width: 50px;
+    width: 50px;            /*Did this for user icon on username page*/
     margin-top: 5%;
 }
 
@@ -131,7 +131,7 @@ button.accent {
     border-radius: 25px;
     width: 100%;
     max-width: 500px;
-    display: inline-block;
+    display: inline-block;                         /* Changed this also for getting a better username container*/
     margin-top: 42px;
     vertical-align: middle;
     position: relative;
@@ -158,7 +158,7 @@ button.accent {
     max-width: 700px;
     border-radius: 25px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;                               /* changed this to dark mode*/
     background-color: #222121;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
@@ -172,7 +172,7 @@ button.accent {
     list-style-type: none;
     background-color: rgb(53, 47, 47);
     margin: 0;
-    overflow: auto;
+    overflow: auto;                              /* changed these properties to match with dark mode*/
     overflow-y: scroll;
     padding: 0 20px 0px 20px;
     height: calc(100% - 150px);
@@ -217,7 +217,7 @@ button.accent {
     overflow: hidden;
     left: 10px;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle;           /* changed this to match dark mode */
     font-size: 18px;
     line-height: 42px;
     color: #fff;
@@ -233,7 +233,7 @@ button.accent {
 }
 
 #chat-page .chat-message p {
-    color: #45da31;;
+    color: #45da31;;                /*changed the text color*/
 }
 
 #messageForm .input-group input {
@@ -250,7 +250,7 @@ button.accent {
 
 .chat-header {
     text-align: center;
-    padding: 15px;
+    padding: 15px;                              /* changed the chat header to match dark mode*/
     border-bottom: 1px solid #ececec;
 }
 
@@ -263,7 +263,7 @@ button.accent {
     padding-top: 5px;
     text-align: center;
     color: rgb(252, 247, 247);
-    position: absolute;
+    position: absolute;                      /*changed the chat header to match dark mode */
     top: 65px;
     width: 100%;
 }
