@@ -11,11 +11,3 @@ public class ChatifyApplication {
 	}
 
 }
-//this is the change
-
-// this change is made by Kartik
-
-//this is change by aaditya
-
-
-// Kartik made another change
