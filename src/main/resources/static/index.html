@@ -3,20 +3,25 @@
 <head>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>Spring Boot WebSocket Chat Application | CalliCoder</title>
+<title>Spring Boot WebSocket Chat Application</title>
 <link rel="stylesheet" href="/css/main.css" />
+<script
+src="https://kit.fontawesome.com/64d58efce2.js"
+crossorigin="anonymous"
+></script>
 </head>
-<body background="18.jpg"
-	style="background-position: center; background-repeat: no-repeat; background-size: cover;">
+<body>
 	<noscript>
 		<h2>Sorry! Your browser doesn't support Javascript</h2>
 	</noscript>
 
 	<div id="username-page">
 		<div class="username-page-container">
+			<!-- <h1>Hello</h1>  to be changed in future -->
 			<h1 class="title">Type your username</h1>
 			<form id="usernameForm" name="usernameForm">
 				<div class="form-group">
+					<i class="fas fa-user fa-lg"></i>
 					<input type="text" id="name" placeholder="Username"
 						autocomplete="off" class="form-control" />
 				</div>
@@ -31,7 +36,7 @@
 	<div id="chat-page" class="hidden">
 		<div class="chat-container">
 			<div class="chat-header">
-				<h2>JavaTechie Global Chat Box</h2>
+				<h2 style="color: aliceblue;"">Welcome To Your Personal Chat Box</h2>
 			</div>
 			<div class="connecting">Connecting...</div>
 			<ul id="messageArea">

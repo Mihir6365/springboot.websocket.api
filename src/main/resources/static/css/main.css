@@ -14,14 +14,15 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     line-height: 1.58;
     color: #333;
     height: 100%;
-    background-position: center;
+    background-image: linear-gradient(to right top, #051937, #1b2b6d, #4f38a0, #cb37cb, #e112eb);
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 body:before {
@@ -30,7 +31,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: 18.jpg;
+    /* background: 18.jpg; */
     content: "";
     z-index: 0;
 }
@@ -46,14 +47,21 @@ body:before {
 }
 
 .form-control {
-    width: 100%;
+    width: 75%;
     min-height: 38px;
-    font-size: 15px;
+    font-size: 1rem;
+    font-weight: 700;
     border: 1px solid #c8c8c8;
 }
 
 .form-group {
     margin-bottom: 15px;
+}
+
+.fa-user {
+    height: 20px;
+    width: 50px;
+    margin-top: 5%;
 }
 
 input {
@@ -118,8 +126,9 @@ button.accent {
 
 .username-page-container {
     background: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 2px;
+    box-shadow: 0 10px 11px rgba(0, 0, 0, 0.27);
+    /* border-radius: 2px; */
+    border-radius: 25px;
     width: 100%;
     max-width: 500px;
     display: inline-block;
@@ -147,19 +156,21 @@ button.accent {
 
 .chat-container {
     max-width: 700px;
+    border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: #222121;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
     height: calc(100% - 60px);
     max-height: 600px;
     position: relative;
+    top: 15%;
 }
 
 #chat-page ul {
     list-style-type: none;
-    background-color: #FFF;
+    background-color: rgb(53, 47, 47);
     margin: 0;
     overflow: auto;
     overflow-y: scroll;
@@ -189,7 +200,7 @@ button.accent {
 }
 
 #chat-page .event-message p {
-    color: #777;
+    color: rgb(255, 255, 255);               /* changing it for joined purpose it was #777 */
     font-size: 14px;
     word-wrap: break-word;
 }
@@ -217,12 +228,12 @@ button.accent {
 }
 
 #chat-page .chat-message span {
-    color: #333;
+    color: rgb(240, 227, 227);   /* did this for name of person chating again not so sure */
     font-weight: 600;
 }
 
 #chat-page .chat-message p {
-    color: #43464b;
+    color: #45da31;;
 }
 
 #messageForm .input-group input {
@@ -251,7 +262,7 @@ button.accent {
 .connecting {
     padding-top: 5px;
     text-align: center;
-    color: #777;
+    color: rgb(252, 247, 247);
     position: absolute;
     top: 65px;
     width: 100%;
