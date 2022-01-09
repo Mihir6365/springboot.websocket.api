@@ -10,5 +10,3 @@ public class ChatifyApplication {
 	}
 
 }
-
-// This is a comment
