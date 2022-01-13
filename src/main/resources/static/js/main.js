@@ -19,13 +19,17 @@ var colors = [
 function connect(event) {
     username = document.querySelector('#name').value.trim();
 
-    if (username) { // if username is valid
-        usernamePage.classList.add('hidden'); //hide the username box
-        chatPage.classList.remove('hidden'); //unhide the chat box
+    // if username is valid
+    if (username) {
+        //hide the username box
+        usernamePage.classList.add('hidden');
+        //unhide the chat box
+        chatPage.classList.remove('hidden');
 
         var socket = new SockJS('/chatify');
         stompClient = Stomp.over(socket);
 
+        //connect with the server to send the message
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
@@ -33,7 +37,7 @@ function connect(event) {
 
 
 function onConnected() {
-    // Subscribe to the Public Topic
+    // Subscribe to the Public Topic after connected
     stompClient.subscribe('/topic/public', onMessageReceived);
 
     // Tell your username to the server
@@ -44,7 +48,7 @@ function onConnected() {
     connectingElement.classList.add('hidden');
 }
 
-
+//if error connecting
 function onError(error) {
     connectingElement.textContent = 'Could not connect to WebSocket server. Please refresh this page to try again!';
     connectingElement.style.color = 'red';
