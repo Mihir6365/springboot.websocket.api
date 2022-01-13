@@ -19,9 +19,9 @@ var colors = [
 function connect(event) {
     username = document.querySelector('#name').value.trim();
 
-    if (username) {
-        usernamePage.classList.add('hidden');
-        chatPage.classList.remove('hidden');
+    if (username) { // if username is valid
+        usernamePage.classList.add('hidden'); //hide the username box
+        chatPage.classList.remove('hidden'); //unhide the chat box
 
         var socket = new SockJS('/chatify');
         stompClient = Stomp.over(socket);
