@@ -60,11 +60,12 @@ function send(event) {
 
     if (messageContent && stompClient) {
         var chatMessage = {
+            //chat message= usename+message
             sender: username,
             content: messageInput.value,
             type: 'CHAT'
         };
-
+        //send to /app/chat
         stompClient.send("/app/chat.send", {}, JSON.stringify(chatMessage));
         messageInput.value = '';
     }
@@ -78,9 +79,11 @@ function onMessageReceived(payload) {
     var messageElement = document.createElement('li');
 
     if (message.type === 'JOIN') {
+        //if someone joins then display this
         messageElement.classList.add('event-message');
         message.content = message.sender + ' joined!';
     } else if (message.type === 'LEAVE') {
+        //if someone leaves then displat this
         messageElement.classList.add('event-message');
         message.content = message.sender + ' left!';
     } else {
@@ -111,6 +114,7 @@ function onMessageReceived(payload) {
 
 
 function getAvatarColor(messageSender) {
+    //colour for the pfp of the sender
     var hash = 0;
     for (var i = 0; i < messageSender.length; i++) {
         hash = 31 * hash + messageSender.charCodeAt(i);

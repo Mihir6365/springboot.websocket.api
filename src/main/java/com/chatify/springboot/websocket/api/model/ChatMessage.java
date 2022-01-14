@@ -1,7 +1,8 @@
 package com.chatify.springboot.websocket.api.model;
 
+// this is models class
 public class ChatMessage {
-    private String content;
+	private String content;
 	private String sender;
 	private MessageType type;
 
@@ -9,6 +10,7 @@ public class ChatMessage {
 		CHAT, LEAVE, JOIN
 	}
 
+	// gettes and setters
 	public String getContent() {
 		return content;
 	}

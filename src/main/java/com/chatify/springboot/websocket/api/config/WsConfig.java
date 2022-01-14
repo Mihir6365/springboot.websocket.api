@@ -6,15 +6,17 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
+//this is config class
 @Configuration
 @EnableWebSocketMessageBroker
-public class WsConfig implements WebSocketMessageBrokerConfigurer{
-    
-    @Override
+public class WsConfig implements WebSocketMessageBrokerConfigurer {
+
+	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
+		// to connect javascript
 		registry.addEndpoint("/chatify").withSockJS();
 	}
-	
+
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry registry) {
 		registry.enableSimpleBroker("/topic");

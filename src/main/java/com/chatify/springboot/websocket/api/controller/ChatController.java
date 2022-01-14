@@ -10,15 +10,18 @@ import com.chatify.springboot.websocket.api.model.ChatMessage;
 
 @Controller
 public class ChatController {
-    
-    @MessageMapping("/chat.register")
+	// supposed to show when someone joins/leaves
+	@MessageMapping("/chat.register")
+	// the channel will be /topic/public
 	@SendTo("/topic/public")
 	public ChatMessage register(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
 		headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
 		return chatMessage;
 	}
 
+	// supposed to show the message
 	@MessageMapping("/chat.send")
+	// the channel will be /topic/public
 	@SendTo("/topic/public")
 	public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
 		return chatMessage;
